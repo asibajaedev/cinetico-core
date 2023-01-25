@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Classification;
+use App\Models\Gender;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,23 +16,23 @@ class GenderSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('genders')->insert([
+        Gender::firstOrCreate([
             'name' => 'Action',
         ]);
-        DB::table('genders')->insert([
+        Gender::firstOrCreate([
             'name' => 'Adventure',
         ]);
-        DB::table('genders')->insert([
+        Gender::firstOrCreate([
             'name' => 'Comedy',
         ]);
-        DB::table('genders')->insert([
+        Gender::firstOrCreate([
             'name' => 'Drama',
         ]);
-        DB::table('genders')->insert([
+        Gender::firstOrCreate([
             'name' => 'Musical',
         ]);
-        DB::table('genders')->insert([
-            'name' => 'Non-fiction',
+        Gender::firstOrCreate([
+            'name' => 'Non-Fiction',
         ]);
     }
 }

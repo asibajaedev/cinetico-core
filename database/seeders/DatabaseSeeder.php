@@ -13,7 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $seeders = Array(GenderSeeder::class);
+        $seeders = Array(GenderSeeder::class,
+            ClassificationSeeder::class,
+            CastTypeSeeder::class);
 
         $this->call($seeders);
     }

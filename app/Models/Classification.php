@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use mysql_xdevapi\Table;
 
-class Gender extends Model
+class Classification extends Model
 {
     use HasFactory;
 
-    protected $table = 'genders';
-    protected $primaryKey = 'gender_id';
-
+    protected $table = 'classifications';
+    protected $primaryKey = 'classification_id';
     public $timestamps = false;
 }
